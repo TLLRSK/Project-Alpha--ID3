@@ -25,19 +25,15 @@ html {
     /**/
     font-size: 12px;
 }
-
-
-.nav {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    box-sizing: border-box;
+header {
+  position: relative;
+  
 }
 
 .nav__btn {
     width: 24px;
     height: 24px;
-    position: absolute;
+    position: fixed;
     background: var(--lm-black);
 }
 
@@ -75,6 +71,28 @@ section {
     font-size: 5.333rem;
 }
 
+/* Home I Line art*/
+.home__line-art {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 600px;
+  width: 600px;
+  border: 1px solid var(--lm-grey-200);
+  justify-content: center;
+  align-items: center;
+}
+
+.home__portrait-toggler {
+  appearance: none;
+}
+
+.portrait-toggler__button {
+  font-size: 3rem;
+}
+
 /* About I */
 .about-1 {
     background-color: var(--lm-white);
@@ -93,7 +111,9 @@ section {
 
 }
 /* About I Line art*/
+.about-1__line-art--main-frame {
 
+}
 
 /* About II */
 .about-2 {
@@ -131,7 +151,6 @@ section {
 
 .about-3 > div {
     height: 100%;
-    border: 1px solid black;
 }
 
 .about-3__div {
@@ -140,17 +159,12 @@ section {
     border-bottom: 1px solid var(--lm-grey-100);
 }
 
-.about-3__div-tools {
-    height: 25%;
-    
+.about-3__tools-title {
+  border-bottom: 1px solid var(--lm-white);
 }
+
 
 /* Contact */
-.contact a {
-    text-decoration: none;
-    color: var(--lm-white);
-}
-
 .contact {
     background-color: var(--lm-black);
     color: var(--lm-white);
@@ -164,11 +178,12 @@ section {
 
 /* Portrait */
 .portrait {
-    background: #ffffff;
-    background-image: url('/img/portrait/lm-portrait.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: none;
+  background: #ffffff;
+  background-image: url('/img/portrait/lm-portrait.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* Headers */
@@ -192,19 +207,21 @@ section {
 .link {
   text-decoration: none;
   color: var(--lm-white);
-  transition: all .1s ease-in-out;
+  transition: all .2s;
+  cursor: pointer;
 }
 
 .main-link:hover {
   color: var(--lm-main);
 }
 
-.menu-link {
-  background-color: var(--lm-main);
+.secondary-link:hover {
+  color: var(--lm-secondary);
 }
 
-.menu-link:hover {
-  color: var(--lm-secondary);
+/* Line art */
+.circle {
+  border-radius: 50%;
 }
 
 /* UTILITIES */

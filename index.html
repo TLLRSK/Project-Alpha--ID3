@@ -8,17 +8,22 @@
     <title>Document</title>
 </head>
 <body class="column">
-    <nav class="nav">
-        <div class="nav__btn nav__home-btn top-left"></div>
-        <div class="nav__btn nav__menu-btn top-right"></div>
-        <div class="nav__btn nav__light-toggler bottom-left"></div>
-        <div class="nav__btn nav__arrow bottom-right"></div>
-    </nav>
+    <header>
+        <span class="nav__btn nav__home-btn top-left"></span>
+        <span class="nav__btn nav__menu-btn top-right"></span>
+        <span class="nav__btn nav__light-toggler bottom-left"></span>
+        <span class="nav__btn nav__arrow bottom-right"></span>
+    </header>
 
     <section class="portrait">
     </section>
 
     <section class="home column">
+        <div class="home__line-art line-art circle">
+            <input type="checkbox" class="home__portrait-toggler">
+                <span class="portrait-toggler__button">*</span>
+            </input>
+        </div>
         <h1 class="home__name">PEDRO<br>J. GIL</h1>
         <div class="home__div-profile column">
             <h2 class="home__profile">UX/UI DESIGNER</h2>
@@ -30,7 +35,7 @@
 
     <section class="column about-1">
         <div class="about-1__bg">
-            <div class="main-frame">
+            <div class="about-1__line-art--main-frame">
                 <div class="mid-frame"></div>
                 <div class="circle circle1"></div>
                 <div class="circle circle2"></div>
@@ -93,12 +98,14 @@
             <h4>Get in touch</h4>
         </div>
 
-        <a href="mailto" class="link contact__email">HELLO@PEDROJGIL.COM</a>
+        <a href="mailto:hello@pedrojgil.com" class="link main-link contact__email">
+            HELLO@PEDROJGIL.COM
+        </a>
         
         <div class="row social-media" style="justify-content: space-between;">
-            <a href="" class="link">Github</a>
-            <a href="" class="link">Instagram</a>
-            <a href="" class="link">Twitter</a>
+            <a href="#" class="link secondary-link">Github</a>
+            <a href="#" class="link secondary-link">Instagram</a>
+            <a href="#" class="link secondary-link">Twitter</a>
         </div>
     </section>
     
