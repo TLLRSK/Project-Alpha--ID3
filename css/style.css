@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    /* Lightmode */
+    --lm-white: #FFFFFF;
+    --lm-grey-100: #DEDDD9;
+    --lm-grey-200: #7D7D7D;
+    --lm-grey-300: #434343;
+    --lm-black: #181818;
+    --lm-main: #FEADA7;
+    --lm-secondary: #074DFF;
+    
+    /* Darkmode */
+    --dm-white: #D6DBD4;
+    --dm-grey-100: #565C57;
+    --dm-grey-200: #343A36;
+    --dm-grey-300: #151D16;
+    --dm-black: #090D09;
+    --dm-main: #1EBC2E;
+    --dm-secondary: #8850A3;
+
+    /**/
+    font-size: 12px;
+}
+
+
+.nav {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.nav__btn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: var(--lm-black);
+}
+
+body {
+  font-family: 'Roboto', 'Verdana';
+  color: var(--lm-grey-300);
+  background-color: var(--lm-grey-100);
+  border-right: 1px dotted var(--lm-grey-200);
+  border-left: 1px dotted var(--lm-grey-200);
+}
+
+section {
+    height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 40px 28px 28px 28px;
+  }
+
+/* Home */
+.home {
+    background-color: var(--lm-grey-100);
+}
+
+.home__name {
+    font-size: 16rem;
+}
+
+.home__div-profile {
+    height: 100%;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.home__profile {
+    font-size: 5.333rem;
+}
+
+/* About I */
+.about-1 {
+    background-color: var(--lm-white);
+    font-size: 4rem;
+}
+
+.about-1__description {
+    height: 50%;
+    justify-content: flex-end;
+}
+
+.about-1__soft-skills {
+    height: 50%;
+    align-items: flex-end;
+    justify-content: flex-end;
+
+}
+/* About I Line art*/
+
+
+/* About II */
+.about-2 {
+    background-color: var(--lm-grey-200);
+    font-size: 4rem;
+}
+
+.about-2__container {
+    width:  100%;
+    height: 100%;
+}
+
+.about-2__div {
+    width: 50%;
+}
+
+.about-2__div-title {
+    width: 100%;
+    height: 50%;
+    font-size: 13.666rem
+}
+
+.about-2__div-description {
+    height: 50%;
+}
+
+/* About I Line art*/
+
+/* About III */
+.about-3 {
+    background-color: var(--lm-grey-300);
+    color: var(--lm-grey-100);
+    font-size: 5.333rem;
+}
+
+.about-3 > div {
+    height: 100%;
+    border: 1px solid black;
+}
+
+.about-3__div {
+    height: 25%;
+    justify-content: flex-end;
+    border-bottom: 1px solid var(--lm-grey-100);
+}
+
+.about-3__div-tools {
+    height: 25%;
+    
+}
+
+/* Contact */
+.contact a {
+    text-decoration: none;
+    color: var(--lm-white);
+}
+
+.contact {
+    background-color: var(--lm-black);
+    color: var(--lm-white);
+}
+
+.contact__email {
+    text-align: center;
+    font-size: 8rem;
+}
+
+
+/* Portrait */
+.portrait {
+    background: #ffffff;
+    background-image: url('/img/portrait/lm-portrait.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Headers */
+.h1 {
+  font-size: 72px;
+}
+.h2 {
+  font-size: 52px;
+}
+.h3 {
+  font-size: 36px;
+}
+.h4 {
+  font-size: 24px;
+}
+.h5 {
+  font-size: 16px;
+}
+
+/* Links */
+.link {
+  text-decoration: none;
+  color: var(--lm-white);
+  transition: all .1s ease-in-out;
+}
+
+.main-link:hover {
+  color: var(--lm-main);
+}
+
+.menu-link {
+  background-color: var(--lm-main);
+}
+
+.menu-link:hover {
+  color: var(--lm-secondary);
+}
+
+/* UTILITIES */
+.font-family--roboto {
+  font-family: 'Roboto';
+}
+
+.font-family--playfair {
+  font-family: 'Playfair Display';
+}
+
+.font-style--thin {
+  font-weight: 100;
+}
+
+.font-style--light {
+  font-weight: 300;
+}
+
+.font-style--regular {
+  font-weight: 400;
+}
+
+.font-style--medium {
+  font-weight: 500;
+}
+
+.font-style--bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.section__title {
+  color: var(--grey-200);
+  border-bottom: 1px solid var(--lm-grey-200);
+}
+
+.top-left {
+    top: 0;
+    left: 0;
+    background-color: black;
+  }
+  
+.top-right {
+  top: 0;
+  right: 0;
+  background-color: black;
+}
+
+.bottom-left {
+  bottom: 0;
+  left: 0;
+  background-color: black;
+}
+
+.bottom-right {
+  bottom: 0;
+  right: 0;
+  background-color: black;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.align-items--center {
+  align-items: center;
+}
+
+.justify-content--center {
+  justify-content: center;
+}
+
+.justify-content--space-between {
+  justify-content: space-between;
+}
+
+.border--lm-grey {
+  border: 1px solid var(--lm-grey-300);
+}
+
+.gap--24px {
+  gap: 24px;
+}
+
+.gap--12px {
+  gap: 8px;
+}
