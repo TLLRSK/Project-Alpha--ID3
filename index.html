@@ -4,110 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=css/style.css>
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
-<body class="column">
+<body>
     <header>
-        <span class="nav__btn nav__home-btn top-left"></span>
-        <span class="nav__btn nav__menu-btn top-right"></span>
-        <span class="nav__btn nav__light-toggler bottom-left"></span>
-        <span class="nav__btn nav__arrow bottom-right"></span>
+        <div class="nav__btn nav__btn--menu">
+            <input type="checkbox" id="menu-btn__toggle"></input>
+            <label for="menu-btn__toggle" class="menu-btn">
+                <span class="menu-btn__burger"></span>
+                <span class="menu-btn__burger"></span>
+            </label>
+        </div>
+
+        <div class="nav__btn nav__btn--arrow"></div>
     </header>
+    <main>
+        <section class="section-home flex" style="background-color: var(--main);">
 
-    <section class="portrait">
-    </section>
-
-    <section class="home column">
-        <div class="home__line-art line-art circle">
-            <input type="checkbox" class="home__portrait-toggler">
-                <span class="portrait-toggler__button">*</span>
-            </input>
-        </div>
-        <h1 class="home__name">PEDRO<br>J. GIL</h1>
-        <div class="home__div-profile column">
-            <h2 class="home__profile">UX/UI DESIGNER</h2>
-            <h2 class="home__profile">VISUAL & WEB DEVELOPER</h2>
-        </div>
-    </section>
-
-
-
-    <section class="column about-1">
-        <div class="about-1__bg">
-            <div class="about-1__line-art--main-frame">
-                <div class="mid-frame"></div>
-                <div class="circle circle1"></div>
-                <div class="circle circle2"></div>
-                <div class="circle circle3"></div>
-            </div>
-        </div>
-        <div class="column about-1__description">
-            <h3>multidisciplinary<br> digital designer<br> with a<br> strong background<br> in visual<br> development</h3>
-        </div>
-        <div  class="column container about-1__soft-skills">
-            <h3>working solo & coop<br> for brands all around<br> the globe.</h3>
-        </div>
-    </section>
-
-    <section class="column about-2">
-        <div class="about-2__container">
-            <div class="about-2__div about-2__div-title">
-                <h3 class="column about-2__title">ADAPTATIVE<br> DESIGN</h3>
-            </div>
-            <div class="row about-2__div-description">
-                <div class="about-2__div"></div>
-                <div class="about-2__div">
-                    <h4 class="column about-2__description">As a designer<br> my job<br> is to fit<br> my vision<br> and skills<br> to your project’s needs.</h4>
+            <article class="container column">
+                
+                <div class="container home_title column">
+                    <h1 class="">PEDRO<br>J. GIL</h1>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="column about-3">
-        <div>
-            <div class="column about-3__div">
-                <span>a)</span>
-                <h3 class="skill">UX/UI design</h3>
-            </div>
-            <div class="column about-3__div">
-                <span>b)</span>
-                <h3 class="skill">Creative direction</h3>
-            </div>
-            <div class="column about-3__div">
-                <span>c)</span>
-                <h3 class="skill">Web development</h3>
-            </div>
-            <div class="column about-3__div" style="border-bottom: none">
-                <h3 style="border-bottom: 1px solid var(--lm-white);">Tools</h3>
-                <div class="row" style="justify-content: space-between;">
-                    <h4 class="tool">JS</h4>
-                    <h4 class="tool">CSS</h4>
-                    <h4 class="tool">HTML</h4>
-                    <h4 class="tool">REACT</h4>
+                <div class="container home-profile column">
+                    <h2 class="">UX/UI<br>DESIGNER</h2>
+                    <h2 class="">VISUAL &<br>WEB DEVELOPER</h2>
                 </div>
+            </article>
+
+            <div class="home__portrait-toggle-container">
+                <input type="checkbox" id="portrait-btn__toggle"></input>
+                <label for="portrait-btn__toggle" class="portrait-btn">
+                    <span class="portrait-btn__line--horizontal"></span>
+                    <span class="portrait-btn__line--vertical"></span>
+                </label>
+                <div class="home__portrait" style="background-color: var(--black);"></div>
             </div>
-        </div>
-    </section>
 
-    <section class="column contact justify-content--space-between">
-        
-        <div class="row" style="justify-content: space-between;">
-            <span>3</span>
-            <h4>Do you need help with a project?</h4>
-            <h4>Get in touch</h4>
-        </div>
+            <div class="home__light-toggle--container">
+                <input type="checkbox" id="js-nav__lightmode-toggle"></input>
+                <label for="js-nav__lightmode-toggle" class="lightmode-toggle__btn">
+                  <span class="lightmode-toggle__selector"></span>
+                </label>
+            </div>
+            
+        </section>
 
-        <a href="mailto:hello@pedrojgil.com" class="link main-link contact__email">
-            HELLO@PEDROJGIL.COM
-        </a>
-        
-        <div class="row social-media" style="justify-content: space-between;">
-            <a href="#" class="link secondary-link">Github</a>
-            <a href="#" class="link secondary-link">Instagram</a>
-            <a href="#" class="link secondary-link">Twitter</a>
-        </div>
-    </section>
-    
+        <section class="section-about-1 flex" style="background-color: var(--white);">
+
+            <article class="container column h4">
+                
+                <span class="about-1__page-number h6 absolute" style="top:0; left:0;">/2</span>
+                <div class="container about-1__description--top flex">
+                    <h3>multidisciplinary<br> digital designer<br> with a<br> strong background<br> in visual<br> development</h3>
+                </div>
+                <div class="container about-1__description--bottom flex">
+                    <h3>working solo & coop<br> for brands all around<br> the globe.</h3>
+                </div>
+
+                <div class="container-line-art absolute line-art" style="border-color: var(--gray-200);border-style: dashed;">
+                    <div class="about-1__line-art--rectangle-center absolute line-art">
+                        <div class="about-1__container-line-art--center absolute">
+                            <span class="circle circle-L absolute line-art" style="border-color: var(--gray-200);border-style: dashed;"></span>
+                            <span class="circle absolute line-art" style="border-color: var(--gray-200);border-style: dashed;"></span>
+                            <span class="circle circle-R absolute line-art" style="border-color: var(--gray-200);border-style: dashed;"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </article>
+
+        </section>
+
+        <section class="section-about-2 flex" style="background-color: var(--grey-100);">
+            <article class="container column" style="color: var(--white)">
+                <div class="container about-2__description--top">
+                    <h3 class="h2">ADAPTATIVE<br> DESIGN</h3>
+                </div>
+                <div class="container about-2__description--top row">
+                    <div class="container about-2__description--bottom-left"></div>
+                    <div class="container about-2__description--bottom-right">
+                        <h3 class="h5">As a designer<br> my job<br> is to fit<br> my vision<br> and skills<br> to your project’s needs.</h3>
+                    </div>
+                </div>
+                <div class="container-line-art absolute line-art" style="border-color: var(--white);">
+                    <span class="about-2__line-art--rectangle-vertical absolute line-art"></span>
+                    <span class="about-2__line-art--rectangle-horizontal absolute line-art"></span>
+                </div>
+            </article>
+        </section>
+
+        <section class="section-about-3 flex" style="background-color: var(--grey-200);">
+
+            <article class="container column h5" style="color: var(--white);">
+                <div class="container about-3__skill column">
+                    <h3 class="skill"><span>a)</span>UX/UI design</h3>
+                </div>
+                <div class="container about-3__skill column">
+                    <h3 class="skill"><span>b)</span>Creative direction</h3>
+                </div>
+                <div class="container about-3__skill column">
+                    <h3 class="skill"><span>c)</span>Web development</h3>
+                </div>
+                <div class="container about-3__skill column" style="border: none;">
+                    <h3 style="border-bottom: 1px solid var(--white)">Tools</h3>
+                    <div class="row justify-content--space-between">
+                        <h4 class="about-3__skill--tool">JS</h4>
+                        <h4 class="about-3__skill--tool">CSS</h4>
+                        <h4 class="about-3__skill--tool">HTML</h4>
+                        <h4 class="about-3__skill--tool">REACT</h4>
+                    </div>
+                </div>
+                <div class="container-line-art absolute row">
+                    <span class="about-3__line-art--rectangle-vertical flex line-art"></span>
+                    <span class="about-3__line-art--rectangle-vertical flex line-art" style="border-left: none"></span>
+                </div>
+            </article>
+
+        </section>
+
+        <section class="section-contact flex" style="background-color: var(--black);">
+            <article class="container column" style="color: var(--white)">
+                <div class="row justify-content--space-between h6">
+                    <span class="section-contact__description--block" style="text-align: left;">3</span>
+                    <h3 class="section-contact__description--block" style="text-align: center;">Do you need help with a project?</h3>
+                    <h3 class="section-contact__description--block" style="text-align: right; color: var(--main)">Get in touch</h3>
+                </div>
+                <div class="container flex justify-content--center align-items--center">
+                    <a href="mailto:hello@pedrojgil.com" class="link main-link h4">
+                        HELLO@PEDROJGIL.COM
+                    </a>
+                </div>
+                <div class="row social-media h6" style="justify-content: space-between;">
+                    <a href="#" class="link secondary-link">Github</a>
+                    <a href="#" class="link secondary-link">Instagram</a>
+                    <a href="#" class="link secondary-link">Twitter</a>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
