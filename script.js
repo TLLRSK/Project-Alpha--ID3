@@ -1,5 +1,5 @@
 // LIGHT TOGGLE
-const  lightToggle = document.querySelector('#js-nav__lightmode-toggle')
+const  lightToggle = document.querySelector('#js-light-toggle__toggler')
 
 lightToggle.addEventListener('click', () => {
     if (lightToggle.checked) {
@@ -20,3 +20,4 @@ lightToggle.addEventListener('click', () => {
         document.documentElement.style.setProperty('--black', '#201F1F');
     }
 });
+
