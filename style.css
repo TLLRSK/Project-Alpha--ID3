@@ -12,6 +12,7 @@ html {
   --grey-200: #524F4E;
   --black: #201F1F;
   font-size: 12px;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,10 +44,12 @@ section {
 .nav__btn--menu {
   top: 5rem;
   right: 5rem;
+  transition: .2s ease;
 }
 .nav__btn--arrow {
   bottom: 4rem;
   left:50%;
+  transition: .2s ease;
 }
 /* Nav - Menu btn*/
 #menu-btn__toggle {
@@ -106,6 +109,9 @@ section {
 }
 .nav__btn--arrow:active {
   transform: translate(-50%, 12px);
+}
+.nav__btn--arrow .displaced {
+  bottom: -4rem;
 }
 
 /* menu */
@@ -168,7 +174,7 @@ section {
   display: flex;
   height: 3rem;
   width: 3rem;
-  outline: 2px solid var(--black);
+  outline: 1px solid var(--black);
   border-radius: 50px;
   cursor: pointer;
   transition: .2s;
@@ -178,7 +184,7 @@ section {
   box-sizing: border-box;
   width: 3rem;
   height: 3rem;
-  outline: 3px solid var(--black);
+  outline: 2px solid var(--black);
   border-radius: 50%;
   z-index: 1;
   transition: .2s;
@@ -196,9 +202,16 @@ section {
   transform: translate(100%, 0);
 }
 
+#js-light-toggle__toggler:hover:active ~ .light-toggle__switch {
+  height: 2.5rem;
+}
+#js-light-toggle__toggler:hover:active ~ .light-toggle__switch > .light-toggle__btn {
+  height: 2.5rem;
+}
+
 /* Home */
 .section__home {
-  padding: 2rem 0 0 0;
+  padding: 2rem 0 2rem 0;
 }
 
 .home__article {

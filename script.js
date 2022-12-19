@@ -21,3 +21,19 @@ lightToggle.addEventListener('click', () => {
     }
 });
 
+// MENU
+const menuToggle = document.querySelector('#menu-btn__toggle');
+const menuBtn = document.querySelector('.nav__btn--menu').style;
+const arrowBtn = document.querySelector('.nav__btn--arrow').style;
+
+menuToggle.addEventListener('click', () => {
+    if (menuToggle.checked) {
+        console.log('menu is open');
+        menuBtn.right = '3rem';
+        arrowBtn.bottom = '-4rem';
+    } else {
+        console.log('menu is not open');
+        menuBtn.right = '5rem';
+        arrowBtn.bottom = '4rem';
+    }
+})
