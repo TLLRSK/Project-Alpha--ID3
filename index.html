@@ -30,7 +30,7 @@
                         <div class="menu__box-div--bottom row" style="color: var(--black)">
                             <div class="menu__light-toggle--container flex">
                                 <input id="js-light-toggle__toggler" type="checkbox">
-                                <label class="light-toggle__switch border" for="js-light-toggle__toggler">
+                                <label class="light-toggle__switch" for="js-light-toggle__toggler">
                                     <span class="light-toggle__btn"></span>
                                 </label>    
                             </div>
@@ -47,14 +47,24 @@
     <main>
         <section id="home" class="section__home flex">
             <article class="home__article article__container border--round" style="background-color: var(--main);">
+                <div class="home__portrait-box">
+                    <input type="checkbox" id="portrait-toggle" class="">
+                    <label for="portrait-toggle" class="portrait-box__btn">
+                        <span class="portrait-btn__span"></span>
+                    </label>
+                </div>
+                <div class="home__portrait border--round" style="border-top-left-radius: 0; border-bottom-left-radius: 0;">  
+                </div>
                 <div class="home__title--container flex">
                     <h1>PEDRO<br>J. GIL</h1>
                 </div>
-                <div class="home__profile--container column">
-                    <h2>UX/UI<br>DESIGNER</h2>
-                    <h2>VISUAL <span clas="font-style--thin" style="color: var(--white);font-weight: 100;">&</span><br>WEB DEVELOPER</h2>
+                <div class="home__profile--container column gap--2rem">
+                    <h2 class="h2 line-height--1rem">UX/UI<br>DESIGNER</h2>
+                    <h2 class="h2 line-height--1rem">VISUAL <span clas="font-style--thin" style="color: var(--white);font-weight: 100;">&</span><br>WEB DEVELOPER</h2>
                 </div>
+                
             </article>
+            
         </section>
 
         <section id="about-1" class="section__about-1 flex border--round" style="background-color: var(--white);">
@@ -92,9 +102,11 @@
                     <h3 class="h1">ADAPTATIVE<br> DESIGN</h3>
                 </div>
                 <div class="about-2__description--bottom row">
-                    <div class="about-2__description--bottom-left"></div>
+                    <div class="about-2__description--bottom-left">
+                        <p class="p1 font-style--bold font">My job is to fit</p>
+                    </div>
                     <div class="about-2__description--bottom-right z-index--5">
-                        <p class="p1 font-style--bold font">My job<br> is to fit<br> my vision<br> and skills<br> into your project’s needs.</p>
+                        <p class="p1 font-style--bold font">my vision<br> and skills<br> into your project’s needs.</p>
                     </div>
                 </div>
                 <div class="lineart-container absolute">
