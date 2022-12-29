@@ -15,14 +15,18 @@
                 <span class="menu-btn__burger"></span>
                 <span class="menu-btn__burger"></span>
             </label>
-            <section id="menu" class="section-menu row">
-                <div class="menu__box--secondary"></div>
-                <div class="menu__box--white column">
+            <div id="menu" class="section__menu section row" style="padding: 0;">
+                <div class="menu__box--secondary column">
+                    <div class="box__container--secondary">
+                        <p class="h3">PJ</p>
+                    </div>
+                </div>
+                <div class="menu__box--white column"  style="color: var(--black)">
                     <div class="box__container column">
-                        <div class="menu__box-div--top row" style="color: var(--black)">
+                        <div class="menu__box-div--top">
                             <p class="p2">PJ</p>
                         </div>
-                        <div class="menu__box-div--center column" style="color: var(--black)">
+                        <div class="menu__box-div--center column">
                             <a href="#home" class="link menu-link h2 font-style--bold">HOME</a>
                             <a href="#about-1" class="link menu-link h2 font-style--bold">ABOUT</a>
                             <a href="#contact" class="link menu-link h2 font-style--bold">CONTACT</a>
@@ -42,45 +46,53 @@
                 </div>    
             </section>
         </div>
-        <div class="nav__btn nav__btn--arrow"></div>
     </nav>
     <main>
-        <section id="home" class="section__home flex">
+        <section id="home" class="section__home section flex">
             <article class="home__article article__container border--round" style="background-color: var(--main);">
+                <div class="home__arrow-slot arrow-slot section__arrow flex" style="border: none;">
+                    <a href="#about-1" class="home__arrow scroll-arrow"></a>
+                </div>
                 <div class="home__portrait-box">
                     <input type="checkbox" id="portrait-toggle" class="">
                     <label for="portrait-toggle" class="portrait-box__btn">
-                        <span class="portrait-btn__span"></span>
+                        <span class="portrait-img"></span>
                     </label>
                 </div>
-                <div class="home__portrait border--round" style="border-top-left-radius: 0; border-bottom-left-radius: 0;">  
-                </div>
                 <div class="home__title--container flex">
-                    <h1>PEDRO<br>J. GIL</h1>
+                    <h1 class="h1 line-height--100">PEDRO<br>J. GIL</h1>
                 </div>
-                <div class="home__profile--container column gap--2rem">
-                    <h2 class="h2 line-height--1rem">UX/UI<br>DESIGNER</h2>
-                    <h2 class="h2 line-height--1rem">VISUAL <span clas="font-style--thin" style="color: var(--white);font-weight: 100;">&</span><br>WEB DEVELOPER</h2>
+                <div class="home__profile--container column">
+                    <h2 class="p1 line-height--100 font-weight--bold">UX/UI DESIGNER</h2>
+                    <h2 class="p1 line-height--100 font-weight--bold">VISUAL <span class="font-weight--thin italic" style="color: var(--white);">&</span> WEB<br>DEVELOPER</h2>
                 </div>
+                <div></div>
                 
             </article>
             
         </section>
 
-        <section id="about-1" class="section__about-1 flex border--round" style="background-color: var(--white);">
+        <section id="about-1" class="section__about-1 section padding--3rem flex border--round " style="background-color: var(--white);">
             <article class="about-1__article article__container column border--round">
-                <div class="section__number">
-                    <div class="circle number__container">
-                        <p class="p3 font-style--thin" style="color: var(--main)">2</p>
+                <div class="arrow-slot section__number background--white border-color--main">
+                    <div class="circle number__container I">
+                        <p class="p3 font-weight--thin italic" style="color: var(--main)">1</p>
                     </div>
                 </div>
-                <div class="about-1__description--container-top flex z-index--5">
-                    <p class="p1">Multidisciplinary digital designer with a strong background <span class="font-family--playfair">in visual development</span></p>
+                <div class="arrow-slot section__arrow flex background--white border-color--main">
+                    <a href="#about-2" class="about-1__arrow scroll-arrow"></a>
                 </div>
-                <div class="about-1__description--container-bottom flex z-index--5">
-                    <p class="p1">working <span class="font-family--playfair">solo & coop</span><br> for brands all around the globe.</p>
+                <div class="about-1__description-container flex--1 column">
+                    <div class="flex--1 description-box I z-index--1">
+                        <p class="p2 font-weight--medium">Multidisciplinary digital designer</p>
+                    </div>
+                    <div class="flex--1 description-box II z-index--1">
+                        <p class="p2 font-weight--medium text-align--center flex--1">with strong background in<br>visual development</p>    
+                    </div>
+                    <div class="flex--1 description-box III z-index--1">
+                        <p class="p2 font-weight--medium text-align--right">Working <span class="p2 font-family--playfair">solo & coop</span> for brands<br>all around the globe.</p>
+                    </div>
                 </div>
-
                 <div class="about-1__lineart-container lineart-container border--round flex absolute">
                     <span class="about-1__lineart--line-center"></span>
                     <div class="about-1__lineart-box--center">
@@ -92,79 +104,104 @@
                         </div>
                     </div>
                 </div>
-
             </article>
         </section>
 
-        <section id="about-2" class="section__about-2 flex border--round" style="background-color: var(--grey-100);">
+        <section id="about-2" class="section__about-2 section padding--3rem flex border--round" style="background-color: var(--grey-100);">
             <article class="about-2__article article__container column border--round" style="color: var(--white);">
-                <div class="about-2__description--top z-index--5">
-                    <h3 class="h1">ADAPTATIVE<br> DESIGN</h3>
-                </div>
-                <div class="about-2__description--bottom row">
-                    <div class="about-2__description--bottom-left">
-                        <p class="p1 font-style--bold font">My job is to fit</p>
-                    </div>
-                    <div class="about-2__description--bottom-right z-index--5">
-                        <p class="p1 font-style--bold font">my vision<br> and skills<br> into your project’s needs.</p>
+                <div class="arrow-slot section__number background--grey-100 border-color--white">
+                    <div class="circle number__container">
+                        <p class="p3 font-weight--thin italic" style="color: var(--white)">2</p>
                     </div>
                 </div>
-                <div class="lineart-container absolute">
-                    <span class="about-2__lineart--rectangle-vertical absolute"></span>
-                    <span class="about-2__lineart--rectangle-horizontal absolute"></span>
+                <div class="arrow-slot section__arrow flex background--grey-100">
+                    <a href="#about-3" class="about-2__arrow scroll-arrow"></a>
                 </div>
+
+                <div class="about-2__description-container flex z-index--1">
+                    <div class="flex flex--1 justify-content--center align-items--center">
+                        <h3 class="h3">ADAPTIVE</h3>
+                    </div>
+                    <div class="flex flex--1 justify-content--center align-items--center">
+                        <h3 class="h3">DESIGN</h3>
+                    </div>
+                </div>
+
+                <div class="about-2__description-container flex z-index--1">
+                    <div class="column flex--1 justify-content--center align-items--center">
+                        <p class="p2 font-weight--medium font">My job is to fit</p>
+                        <p class="p2 font-weight--medium font">my vision & skills</p>
+                    </div>
+                    <div class="flex flex--1 justify-content--center align-items--center">
+                        <p class="p2 font-weight--medium font">into your<br>project’s needs.</p>
+                    </div>
+                </div>
+
+                <div class="about-2__lineart-container lineart-container border--round flex absolute">
+                    <div class="about-2__lineart-box--top flex flex--1">
+                        <div class="lineart-container box-1"></div>
+                        <div class="lineart-container box-2"></div>
+                    </div>
+                    <div class="about-2__lineart-box--bottom flex flex--1">
+                        <div class="lineart-container box-3"></div>
+                        <div class="lineart-container box-4"></div>
+                    </div>
+                </div>
+                
+
             </article>
         </section>
 
-        <section id="about-3" class="section__about-3 flex border--round" style="background-color: var(--grey-200);">
-            
+        <section id="about-3" class="section__about-3 section padding--3rem flex border--round" style="background-color: var(--grey-200);">
             <article class="about-3__article article__container column border--round" style="color: var(--white);">
-                <div class="about-3__lineart--container lineart-container absolute row">
-                    <div class="about-3__lineart--rectangle-vertical L"></div>
-                    <div class="about-3__lineart--rectangle-vertical R"></div>
+                <div class="arrow-slot section__number  background--grey-200" style="left:50%; transform: translate(-50%, 0);">
+                    <div class="circle III number__container z-index--10">
+                        <p class="p3 font-weight--thin italic">3</p>
+                    </div>
+                </div>
+                <div class="arrow-slot section__arrow flex background--grey-200 z-index--10">
+                    <a href="#contact" class="about-3__arrow scroll-arrow"></a>
                 </div>
                 <div class="about-3__skill--container column z-index--5">
                     <p class="about-3__skill-letter">a)</p>
-                    <h3 class="skill p1">UX/UI design</h3>
+                    <h3 class="skill font-weight--medium p1">UX/UI<br>Design</h3>
                 </div>
                 <div class="about-3__skill--container column z-index--5">
                     <p class="about-3__skill-letter">b)</p>
-                    <h3 class="skill p1">Creative direction</h3>
+                    <h3 class="skill font-weight--medium p1">Creative<br>Direction</h3>
                 </div>
                 <div class="about-3__skill--container column z-index--5">
                     <p class="about-3__skill-letter">c)</p>
-                    <h3 class="skill p1">Web development</h3>
+                    <h3 class="skill font-weight--medium p1">Web<br>Development</h3>
                 </div>
-                <div class="about-3__skill--container column z-index--5" style="border: none; margin: 0 3rem 0 3rem;">
-                    <h2 class="p1" style="border-bottom: 1px solid var(--white);">Tools</h2>
+                <div class="about-3__skill--container tools column z-index--5">
+                    <h2 class="font-weight--medium p1" style="border-bottom: 1px solid var(--white);">Tools</h2>
                     <div class="row justify-content--space-between">
                         <p class="skills__tool p1">JS</p>
                         <p class="skills__tool p1">CSS</p>
                         <p class="skills__tool p1">HTML</p>
                         <p class="skills__tool p1">REACT</p>
+                        <p class="skills__tool p1 blank"></p>
                     </div>
+                </div>
+                <div class="about-3__lineart--container lineart-container absolute row">
+                    <div class="about-3__lineart--rectangle-vertical L"></div>
+                    <div class="about-3__lineart--rectangle-vertical R"></div>
                 </div>
             </article>
         </section>
 
-        <section id="contact" class="section__contact flex border--round" style="background-color: var(--black);">
-            <article class="contact__article article__container column justify-content--center" style="color: var(--white)">
-                <div class="contact__container--top row">
-                    <div class="container-top__div">
-                        <div class="section-number">
-                            <div class="circle flex align-items--center justify-content--center" style="border: 1px dashed var(--white);">
-                                <p class="p3 font-style--thin">3</p>
-                            </div>
-                        </div>
+        <section id="contact" class="section__contact section flex">
+            <article class="contact__article article__container column justify-content--center border--round" style="color: var(--white); background-color: var(--black);">
+                <div class="contact__container--top flex">
+                    <div class="contact__container--description flex gap--1rem">
+                        <p class="contact__p--help p3">Do you need help with a project?</p>
+                        <p class="p3" style="color: var(--main)">Get in touch</p>
                     </div>
-                    <div class="container-top__div" style="text-align: center;">
-                        <p class="p3">Do you need help with a project? <span style="color: var(--main)">Get in touch</span></p>
-                    </div>
-                    <div class="contact__container--top row">
-                    </div>
+                    <div class=""></div>
                 </div>
                 <div class="contact__container--center column">
-                    <a href="mailto:hello@pedrojgil.com" class="link main-link h2">
+                    <a href="mailto:hello@pedrojgil.com" class="email-link link main-link h2">
                         HELLO@PEDROJGIL.COM
                     </a>
                     

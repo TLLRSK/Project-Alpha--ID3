@@ -3,60 +3,117 @@ const  lightToggle = document.querySelector('#js-light-toggle__toggler')
 
 lightToggle.addEventListener('click', () => {
     if (lightToggle.checked) {
-        document.documentElement.style.setProperty('--main', '#208D2B');
-        document.documentElement.style.setProperty('--secondary', '#644595');
-        document.documentElement.style.setProperty('--alert', '#EA2B1F');
-        document.documentElement.style.setProperty('--white', '#C4CBC4');
-        document.documentElement.style.setProperty('--grey-100', '#464F49');
-        document.documentElement.style.setProperty('--grey-200', '#242E25');
-        document.documentElement.style.setProperty('--black', '#090D09');
+        document.documentElement.style.setProperty('--main', 'hsla(126, 63%, 34%, 1)');
+        document.documentElement.style.setProperty('--secondary', 'hsla(263, 37%, 43%, 1)');
+        document.documentElement.style.setProperty('--alert', 'hsla(4, 83%, 52%, 1)');
+        document.documentElement.style.setProperty('--white', 'hsla(120, 6%, 78%, 1)');
+        document.documentElement.style.setProperty('--grey-100', 'hsla(140, 6%, 29%, 1)');
+        document.documentElement.style.setProperty('--grey-200', 'hsla(126, 12%, 16%, 1)');
+        document.documentElement.style.setProperty('--black', 'hsla(120, 18%, 4%, 1)');
     } else {
-        document.documentElement.style.setProperty('--main', '#E2652F');
-        document.documentElement.style.setProperty('--secondary', '#074DFF');
-        document.documentElement.style.setProperty('--alert', '#EA2B1F');
-        document.documentElement.style.setProperty('--white', '#FDFCFC');
-        document.documentElement.style.setProperty('--grey-100', '#878482');
-        document.documentElement.style.setProperty('--grey-200', '#524F4E');
-        document.documentElement.style.setProperty('--black', '#201F1F');
+        document.documentElement.style.setProperty('--main', 'hsla(7, 100%, 65%, 1)');
+        document.documentElement.style.setProperty('--secondary', 'hsla(223, 100%, 51%, 1)');
+        document.documentElement.style.setProperty('--alert', 'hsla(4, 83%, 52%, 1)');
+        document.documentElement.style.setProperty('--white', 'hsla(0, 20%, 99%, 1)');
+        document.documentElement.style.setProperty('--grey-100', 'hsla(24, 2%, 52%, 1)');
+        document.documentElement.style.setProperty('--grey-200', 'hsla(15, 3%, 31%, 1)');
+        document.documentElement.style.setProperty('--black', 'hsla(0, 2%, 12%, 1)');
     }
 });
 
-// MENU
-/* Opening & closing menu */
-const menuToggle = document.querySelector('#menu-btn__toggle');
-const menuBtn = document.querySelector('.nav__btn--menu').style;
-const arrowBtn = document.querySelector('.nav__btn--arrow').style;
+// PORTRAIT
+const portraitBox = document.querySelector('.home__portrait-box');
+const portraitToggle = document.querySelector('#portrait-toggle');
+const portraitBtn = document.querySelector('.portrait-box__btn');
+const portraitImg = document.querySelector('.portrait-img');
 
-
-menuToggle.addEventListener('click', (event) => {
-    if (menuToggle.checked) {
-        menuBtn.right = '3rem';
-        arrowBtn.bottom = '-4rem';
+portraitToggle.addEventListener('click', (event) => {
+    if (portraitToggle.checked) {
+        portraitBtn.classList.add('open');
+        setTimeout(() => {
+            portraitBtn.classList.add('full');
+        }, 80);
+        setTimeout(() => {
+            portraitImg.style.opacity = 1;
+        }, 90);
     } else {
-        menuBtn.right = '5rem';
-        arrowBtn.bottom = '4rem';
+        portraitImg.style.opacity = 0;
+        portraitBtn.classList.remove('full');
+        portraitBtn.classList.remove('open');   
     }
 })
 
-/* Using menu links */
+
+// MENU
+// Opening & closing menu
+const menuToggle = document.querySelector('#menu-btn__toggle');
+const menuBtn = document.querySelector('.nav__btn--menu').style;
+
+
+// Using menu links
 const menu = document.querySelector('#menu');
 
 menu.addEventListener('click', (event) => {
     if (event.target.classList.contains('menu-link')) {
         menuToggle.checked = false;
-        menuBtn.right = '5rem';
-        arrowBtn.bottom = '4rem';
     };
 })
 
-/* Portrait toggle */
-const portraitBox = document.querySelector('.home__portrait-box');
-const portraitToggle = document.querySelector('#portrait-toggle');
+// Handling media query
+const emailUrl = document.querySelector('.email-link');
+const helpP = document.querySelector('.contact__p--help');
 
-portraitBox.addEventListener('click', (event) => {
-    if (portraitToggle.checked) {
-        portraitBox.classList.add('open')
+const mediaQuery = window.matchMedia('(max-width: 600px)');
+
+const handleMediaQueryChange = (mq) => {
+    if (mq.matches) {
+        emailUrl.innerHTML = 'HELLO@<br>PEDROJ<br>GIL<br>.COM';
+        helpP.innerHTML = 'Do you need<br>help with a project?';
     } else {
-        portraitBox.classList.remove('open')
+        emailUrl.innerHTML = 'HELLO@PEDROJGIL.COM';
+        helpP.innerHTML = 'Do you need help with a project?';
     }
-})
+}
+
+window.addEventListener("resize", handleMediaQueryChange.bind(null, mediaQuery));
+handleMediaQueryChange(mediaQuery);
+
+//Handling sections
+let sections = document.querySelectorAll('section');
+let sectionsId = [];
+
+sections.forEach(section => sectionsId.push(section.id));
+
+
+// Navigation
+// Getting current position
+const navBtnMenu = document.querySelector('.nav__btn--menu');
+const btnMenu = document.querySelector('.menu-btn');
+
+let currentSection = null;
+let nextSection = null;
+let currentY = null;
+
+const getCurrentPosition = () => {
+    currentY = window.scrollY;
+    
+    sections.forEach(section => {
+        if(currentY >= section.offsetTop && currentY < (section.offsetTop + section.offsetHeight)) {
+            currentSection = section.id;
+            nextSection = sectionsId[(sectionsId.indexOf(currentSection) + 1)];
+        }
+    })
+// Handling menu button
+    if(currentSection == 'home' || currentSection == 'contact' && !menuToggle.checked) {
+        navBtnMenu.style.right = '4rem';
+        navBtnMenu.style.top = '4rem';
+    } else {
+        navBtnMenu.style.right = '4rem';
+        navBtnMenu.style.top = '2rem';
+       
+    }
+
+}
+
+window.addEventListener('load', getCurrentPosition);
+window.addEventListener('scroll', getCurrentPosition);
