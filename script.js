@@ -28,7 +28,7 @@ const portraitBtn = document.querySelector('.portrait-box__btn');
 const portraitImg = document.querySelector('.portrait-img');
 
 portraitToggle.addEventListener('click', (event) => {
-    if (portraitToggle.checked) {
+    if (portraitToggle.checked) {      
         portraitBtn.classList.add('open');
         setTimeout(() => {
             portraitBtn.classList.add('full');
@@ -37,18 +37,31 @@ portraitToggle.addEventListener('click', (event) => {
             portraitImg.style.opacity = 1;
         }, 90);
     } else {
-        portraitImg.style.opacity = 0;
-        portraitBtn.classList.remove('full');
-        portraitBtn.classList.remove('open');   
+        portraitBtn.classList.add('close')
+        setTimeout(() => {
+            portraitImg.style.opacity = 0;
+            portraitBtn.classList.remove('close');
+            portraitBtn.classList.remove('full');
+            portraitBtn.classList.remove('open');   
+        }, 80);
     }
 })
 
 
 // MENU
-// Opening & closing menu
 const menuToggle = document.querySelector('#menu-btn__toggle');
 const menuBtn = document.querySelector('.nav__btn--menu').style;
 
+// Opening menu on section: About-1
+menuToggle.addEventListener('click', () => {
+    if(currentSection == 'about-1' && menuToggle.checked === true) {
+        console.log('click')
+        btnMenu.classList.remove('border--dashed-main')
+    } else if (currentSection == 'about-1' && menuToggle.checked === false) {
+        console.log('click')
+        btnMenu.classList.add('border--dashed-main')
+    }
+})
 
 // Using menu links
 const menu = document.querySelector('#menu');
@@ -59,11 +72,13 @@ menu.addEventListener('click', (event) => {
     };
 })
 
+
+
 // Handling media query
 const emailUrl = document.querySelector('.email-link');
 const helpP = document.querySelector('.contact__p--help');
 
-const mediaQuery = window.matchMedia('(max-width: 600px)');
+const mediaQuery = window.matchMedia('(max-width: 1080px)');
 
 const handleMediaQueryChange = (mq) => {
     if (mq.matches) {
@@ -74,9 +89,9 @@ const handleMediaQueryChange = (mq) => {
         helpP.innerHTML = 'Do you need help with a project?';
     }
 }
-
+window.addEventListener("load", handleMediaQueryChange.bind(null, mediaQuery));
 window.addEventListener("resize", handleMediaQueryChange.bind(null, mediaQuery));
-handleMediaQueryChange(mediaQuery);
+
 
 //Handling sections
 let sections = document.querySelectorAll('section');
@@ -103,17 +118,29 @@ const getCurrentPosition = () => {
             nextSection = sectionsId[(sectionsId.indexOf(currentSection) + 1)];
         }
     })
-// Handling menu button
-    if(currentSection == 'home' || currentSection == 'contact' && !menuToggle.checked) {
-        navBtnMenu.style.right = '4rem';
-        navBtnMenu.style.top = '4rem';
-    } else {
-        navBtnMenu.style.right = '4rem';
-        navBtnMenu.style.top = '2rem';
-       
-    }
 
 }
 
 window.addEventListener('load', getCurrentPosition);
 window.addEventListener('scroll', getCurrentPosition);
+
+// Change menu btn bordercolor
+const changeMenuBtn = () => {
+    if (currentSection == 'about-1') {
+        btnMenu.classList.add('border--dashed-main')
+    } else {
+        btnMenu.classList.remove('border--dashed-main')
+    }
+}
+// Change body background color
+let bodyBackground = document.querySelector('body');
+const changeBodyColor = () => {
+    if (currentSection == 'contact') {
+        bodyBackground.classList.add('background--black')
+    } else {
+        bodyBackground.classList.remove('background--black')
+    }
+}
+
+window.addEventListener('scroll', changeMenuBtn);
+window.addEventListener('scroll', changeBodyColor);

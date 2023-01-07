@@ -27,13 +27,19 @@
                             <p class="p2">PJ</p>
                         </div>
                         <div class="menu__box-div--center column">
-                            <a href="#home" class="link menu-link h2 font-style--bold">HOME</a>
-                            <a href="#about-1" class="link menu-link h2 font-style--bold">ABOUT</a>
-                            <a href="#contact" class="link menu-link h2 font-style--bold">CONTACT</a>
+                            <div>
+                                <a href="#home" class="link menu-link h2 font-style--bold">HOME</a> 
+                            </div>
+                            <div>
+                                <a href="#about-1" class="link menu-link h2 font-style--bold">ABOUT</a>
+                            </div>
+                            <div>
+                                <a href="#contact" class="link menu-link h2 font-style--bold">CONTACT</a>
+                            </div>
                         </div>
                         <div class="menu__box-div--bottom row" style="color: var(--black)">
                             <div class="menu__light-toggle--container flex">
-                                <input id="js-light-toggle__toggler" type="checkbox">
+                                <input id="js-light-toggle__toggler" class="light-toggle__toggler" type="checkbox">
                                 <label class="light-toggle__switch" for="js-light-toggle__toggler">
                                     <span class="light-toggle__btn"></span>
                                 </label>    
@@ -49,14 +55,14 @@
     </nav>
     <main>
         <section id="home" class="section__home section flex">
-            <article class="home__article article__container border--round" style="background-color: var(--main);">
+            <article class="home__article article__container" style="background-color: var(--main);">
                 <div class="home__arrow-slot arrow-slot section__arrow flex" style="border: none;">
                     <a href="#about-1" class="home__arrow scroll-arrow"></a>
                 </div>
                 <div class="home__portrait-box">
                     <input type="checkbox" id="portrait-toggle" class="">
                     <label for="portrait-toggle" class="portrait-box__btn">
-                        <span class="portrait-img"></span>
+                        <span class="portrait-img" alt="portrait of pedro j"></span>
                     </label>
                 </div>
                 <div class="home__title--container flex">
@@ -64,7 +70,7 @@
                 </div>
                 <div class="home__profile--container column">
                     <h2 class="p1 line-height--100 font-weight--bold">UX/UI DESIGNER</h2>
-                    <h2 class="p1 line-height--100 font-weight--bold">VISUAL <span class="font-weight--thin italic" style="color: var(--white);">&</span> WEB<br>DEVELOPER</h2>
+                    <h2 class="p1 line-height--100 font-weight--bold">VISUAL <span class="font-weight--thin italic" style="color: var(--white); font-weight: 300;">&</span> WEB<br>DEVELOPER</h2>
                 </div>
                 <div></div>
                 
@@ -84,13 +90,14 @@
                 </div>
                 <div class="about-1__description-container flex--1 column">
                     <div class="flex--1 description-box I z-index--1">
-                        <p class="p2 font-weight--medium">Multidisciplinary digital designer</p>
+                        <p class="p1 font-weight--medium">Multidisciplinary<br>digital<br>designer</p>
+
                     </div>
                     <div class="flex--1 description-box II z-index--1">
-                        <p class="p2 font-weight--medium text-align--center flex--1">with strong background in<br>visual development</p>    
+                        <p class="p1 font-weight--medium text-align--center flex--1">with strong background<br>as visual dev</p>    
                     </div>
                     <div class="flex--1 description-box III z-index--1">
-                        <p class="p2 font-weight--medium text-align--right">Working <span class="p2 font-family--playfair">solo & coop</span> for brands<br>all around the globe.</p>
+                        <p class="p1 font-weight--medium text-align--right">working <span class="p1-pf font-family--playfair">solo & coop</span><br>for brands<br>all around the globe.</p>
                     </div>
                 </div>
                 <div class="about-1__lineart-container lineart-container border--round flex absolute">
@@ -119,7 +126,7 @@
                 </div>
 
                 <div class="about-2__description-container flex z-index--1">
-                    <div class="flex flex--1 justify-content--center align-items--center">
+                    <div class="about-2__text-box flex flex--1 padding--3rem justify-content--center align-items--center">
                         <h3 class="h3">ADAPTIVE</h3>
                     </div>
                     <div class="flex flex--1 justify-content--center align-items--center">
@@ -129,11 +136,10 @@
 
                 <div class="about-2__description-container flex z-index--1">
                     <div class="column flex--1 justify-content--center align-items--center">
-                        <p class="p2 font-weight--medium font">My job is to fit</p>
-                        <p class="p2 font-weight--medium font">my vision & skills</p>
+                        <p class="p1 font-weight--medium text-align--left">My job is to fit<br>my vision & skills</p>
                     </div>
                     <div class="flex flex--1 justify-content--center align-items--center">
-                        <p class="p2 font-weight--medium font">into your<br>project’s needs.</p>
+                        <p class="p1 font-weight--medium text-align--right">into your<br>project’s needs.</p>
                     </div>
                 </div>
 
@@ -192,7 +198,7 @@
         </section>
 
         <section id="contact" class="section__contact section flex">
-            <article class="contact__article article__container column justify-content--center border--round" style="color: var(--white); background-color: var(--black);">
+            <article class="contact__article article__container column justify-content--center" style="color: var(--white); background-color: var(--black);">
                 <div class="contact__container--top flex">
                     <div class="contact__container--description flex gap--1rem">
                         <p class="contact__p--help p3">Do you need help with a project?</p>
@@ -207,9 +213,9 @@
                     
                 </div>
                 <div class="contact__container--bottom row">
-                    <a href="#" class="link secondary-link p3">Github</a>
-                    <a href="#" class="link secondary-link p3">Instagram</a>
-                    <a href="#" class="link secondary-link p3">Twitter</a>
+                    <a href="https://www.instagram.com/jojaiopeter/" class="link secondary-link p3" target="_blank">Github</a>
+                    <a href="https://www.instagram.com/jojaiopeter/" class="link secondary-link p3" target="_blank">Instagram</a>
+                    <a href="https://www.behance.net/peterjojaia5e4" class="link secondary-link p3" target="_blank">Behance</a>
                 </div>
             </article>
         </section>
