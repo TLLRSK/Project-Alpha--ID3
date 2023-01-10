@@ -78,19 +78,24 @@ menu.addEventListener('click', (event) => {
 const emailUrl = document.querySelector('.email-link');
 const helpP = document.querySelector('.contact__p--help');
 
-const mediaQuery = window.matchMedia('(max-width: 1080px)');
+const mediaQuery960px = window.matchMedia('(max-width: 960px)');
+const mediaQuery1280px = window.matchMedia('(max-width: 1280px)');
+const mediaQueryPlus1280px = window.matchMedia('(min-width: 1281px)');
 
 const handleMediaQueryChange = (mq) => {
-    if (mq.matches) {
+    if (mediaQuery960px.matches) {
         emailUrl.innerHTML = 'HELLO@<br>PEDROJ<br>GIL<br>.COM';
         helpP.innerHTML = 'Do you need<br>help with a project?';
-    } else {
+    } else if (mediaQuery1280px.matches) {
+        emailUrl.innerHTML = 'HELLO@<br>PEDROJGIL.COM';
+        helpP.innerHTML = 'Do you need help with a project?';
+    } else if (mediaQueryPlus1280px.matches) {
         emailUrl.innerHTML = 'HELLO@PEDROJGIL.COM';
         helpP.innerHTML = 'Do you need help with a project?';
     }
 }
-window.addEventListener("load", handleMediaQueryChange.bind(null, mediaQuery));
-window.addEventListener("resize", handleMediaQueryChange.bind(null, mediaQuery));
+window.addEventListener("load", handleMediaQueryChange);
+window.addEventListener("resize", handleMediaQueryChange);
 
 
 //Handling sections
