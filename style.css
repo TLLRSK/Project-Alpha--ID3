@@ -21,6 +21,8 @@ body {
   background: var(--white);
   margin: 0;
   transition: all .2s ease-in;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 h1, h2, h3, p {
@@ -30,7 +32,7 @@ h1, h2, h3, p {
 }
 
 .section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -45,7 +47,11 @@ h1, h2, h3, p {
   border-left: 12px solid transparent;
   border-right: 12px solid transparent;
   border-top: 24px solid var(--grey-100);
-  transition: all .2s ease-in;
+  transition: all .1s ease-in;
+}
+.next-page{
+  transform: scale(0.8);
+  transform: translateY(3rem);
 }
 .arrow-slot {
   justify-content: center;
@@ -165,6 +171,7 @@ h1, h2, h3, p {
   display: block;
   width: 100%;
   flex: 1;
+  padding-top: 1rem;
 }
 
 .menu__box-div--center {
@@ -242,7 +249,7 @@ h1, h2, h3, p {
 }
 
 .home__article {
-  padding: 6rem 6rem;
+  padding: 4rem 4rem 6rem 4rem;
   flex-direction: column;
   position: relative;
   border-bottom-right-radius: 3rem;
@@ -662,10 +669,10 @@ h1, h2, h3, p {
   font-size: 16rem;
 }
 .h2 {
-  font-size: 12rem;
+  font-size: 8rem;
 }
 .h3 {
-  font-size: 8rem;
+  font-size: 7rem;
 }
 
 .p1 {
@@ -675,11 +682,12 @@ h1, h2, h3, p {
   font-size: 6rem;
 }
 .p2 {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 .p3 {
   font-size: 2rem;
 }
+
 
 /* fonts */
 .font-family--roboto {
@@ -811,22 +819,22 @@ h1, h2, h3, p {
   border-color: var(--main);
 }
 /* Opacity */
+.opacity--0 {
+  opacity: 0;
+}
 .opacity--03 {
   opacity: .3;
 }
 .opacity--05 {
   opacity: .5;
 }
-.opacity--0 {
-  opacity: 0;
+.opacity--07 {
+  opacity: .7;
 }
 
+
 /* MEDIA */
-
-
-/* Si es una pantalla y el tamaño es como mucho 1280px */
-@media only screen and (max-width: 1480px) {
-  /* About 1 */
+@media only screen and (max-width: 1280px) {
   .about-1__lineart-circle--container-1 {
     width: 32rem;
     height: 32em;
@@ -839,33 +847,10 @@ h1, h2, h3, p {
     position: absolute;
     right: 66%;
   }
-  /* Utilities */
-  .h1 {
-    font-size:11rem;
-  }
-  .h2 {
-    font-size:9rem;
-  }
-  .h3 {
-    font-size: 7rem;
-  }
-  .p1 {
-    font-size: 3rem;
-  }
-  .p1-pf {
-    font-size: 3.5rem;
-  }
-  .p2 {
-    font-size: 3rem;
-  }
-  .p3 {
-    font-size: 1.5rem;
-  }
 }
 
-
-/* Si es una pantalla y el tamaño es como mucho 880px */
-@media only screen and (max-width: 960px) {
+/*1024px */
+@media only screen and (max-width: 1024px) {
   html {
     font-size: 6px;
   }
@@ -888,7 +873,7 @@ h1, h2, h3, p {
   }
 
   .h2 {
-    font-size: 14rem;
+    font-size: 13rem;
   }
   .h3 {
     font-size: 8rem;
@@ -924,6 +909,10 @@ h1, h2, h3, p {
   .box__container {
     padding: 3rem 4rem 7rem 4rem;
   }
+  .box__container--secondary{
+    padding-top: 1.5rem;
+  }
+
   .box__container--secondary p {
     color: var(--white);
   }
@@ -1042,3 +1031,33 @@ h1, h2, h3, p {
   }
 }
 
+/* 480px */
+@media only screen and (max-width: 480px) {
+  /* About 1 */
+  .about-1__lineart-circle--container-1 {
+    width: 50rem;
+    height: 50rem;
+  }
+  /* Utilities */
+  .h1 {
+    font-size:12rem;
+  }
+  .h2 {
+    font-size:11rem;
+  }
+  .h3 {
+    font-size: 8rem;
+  }
+  .p1 {
+    font-size: 4rem;
+  }
+  .p1-pf {
+    font-size: 4.5rem;
+  }
+  .p2 {
+    font-size: 3.5rem;
+  }
+  .p3 {
+    font-size: 3rem;
+  }
+}

@@ -72,6 +72,17 @@ menu.addEventListener('click', (event) => {
     };
 })
 
+// Using arrows
+const arrow = document.querySelectorAll('.scroll-arrow');
+animateArrow = (event) => {
+  event.target.classList.add("next-page")
+  setTimeout(()=>{
+    event.target.classList.remove("next-page")
+  },200)
+}
+arrow.forEach((el) => {
+  el.addEventListener('click', animateArrow);
+});
 
 
 // Handling media query
