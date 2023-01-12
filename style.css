@@ -20,7 +20,6 @@ body {
   color: var(--grey-300);
   background: var(--white);
   margin: 0;
-  transition: all .2s ease-in;
   min-height: 100vh;
   min-height: -webkit-fill-available;
 }
