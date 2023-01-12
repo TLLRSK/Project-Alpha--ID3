@@ -110,6 +110,7 @@ h1, h2, h3, p {
   background: var(--black);
   transform: translateY(-6px);
   transition: all .2s ease-in;
+  opacity: .7;
 }
 .menu-btn__burger + span {
   transform: translateY(6px);
@@ -118,12 +119,12 @@ h1, h2, h3, p {
   transform: translateY(6px);
 }
 #menu-btn__toggle:hover ~ .menu-btn > .menu-btn__burger {
-  background: var(--secondary);
+  opacity: 1;
 }
 
 #menu-btn__toggle:checked ~ .menu-btn > .menu-btn__burger {
   transform: rotate(45deg);
-  background: var(--secondary);
+  opacity: 1;
 }
 #menu-btn__toggle:checked ~ .menu-btn > .menu-btn__burger + span {
   transform: rotate(-45deg);
@@ -232,10 +233,6 @@ h1, h2, h3, p {
 
 .light-toggle__toggler:hover:checked ~ .light-toggle__switch > .light-toggle__btn {
   transform: translate(100%, 0);
-}
-
-.light-toggle__toggler:hover:active ~ .light-toggle__switch {
-  height: 2.5rem;
 }
 .light-toggle__toggler:hover:active ~ .light-toggle__switch > .light-toggle__btn {
   height: 2.5rem;
