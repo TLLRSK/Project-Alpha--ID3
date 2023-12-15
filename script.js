@@ -91,7 +91,7 @@ const helpP = document.querySelector('.contact__p--help');
 
 const mediaQuery960px = window.matchMedia('(max-width: 960px)');
 const mediaQuery1280px = window.matchMedia('(max-width: 1280px)');
-const mediaQueryPlus1280px = window.matchMedia('(min-width: 1281px)');
+const mediaQueryPlus1280px = window.matchMedia('(min-width: 1288px)');
 
 const handleMediaQueryChange = (mq) => {
     if (mediaQuery960px.matches) {
